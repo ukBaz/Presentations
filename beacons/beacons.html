@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>BLE Beacons</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/moon.css" id="theme">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h1>Bluetooth Beacons</h1>
+					<p>Barry Byford</p>
+					<p>@uk_baz</p>
+				</section>
+
+				<section>
+					<h2>The Technology</h2>
+					<p>file:///home/chronos/u-0f4388224df80168f2f5dd85c8dfc3256e0a1f86/Downloads/Bluetooth_low_energy_CSR.pdf.</p>
+				</section>
+                <section>
+                    <h2>altBeacon Specification</h2>
+                    <p>AltBeacon is a protocol specification that defines a 
+                    message format for proximity beacon advertisements. 
+                    AltBeacon proximity beacon advertisements are transmitted
+                    by devices for the purpose of signaling their proximity 
+                    to nearby receivers.</p>
+                    <p><img width=90% src="images/altbeacon-spec-exploded-view.png"></p>
+                    <p><small>
+                        <a href="https://github.com/AltBeacon/spec">
+                        https://github.com/AltBeacon/spec</a>
+                    </small></p>
+                </section>
+                <section>
+                    <h2>UriBeacon Specification</h2>
+                    <p>The Web Uri Open Beacon specification for the Internet of Things</p>
+                    <p>(pronounced YUR-ee-BEE-kun)</p>
+                    <p><img width = 90% src="images/uribeacon-figure.png"></p>
+                    <p><small>
+                        <a href="https://github.com/google/uribeacon/tree/master/specification">
+                            https://github.com/google/uribeacon/tree/master/specification</a>
+                    </small></p>
+                </section>
+                <section>
+                    <h2>iBeacon</h2>
+                    <p>The specifications are available after signing an NDA.</p>
+                    <p>https://developer.apple.com/ibeacon/</p>
+                </section>
+                <section>
+                    <h2>Scott Jenson</h2>
+                    <video width="640" height="480" controls>
+                      <source src="images/ScottVending.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+			    transition: 'convex'
+			    });
+
+		</script>
+
+	</body>
+</html>
