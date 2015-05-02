@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - Barebones</title>
+		<title>GNSS intro</title>
 
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/league.css" id="theme">
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/moon.css" id="theme">
 	</head>
 
 	<body>
@@ -17,25 +17,113 @@
 			<div class="slides">
 
 				<section>
-					<h2>Barebones Presentation</h2>
-					<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+					<h2>A Brief Introduction to Global Navigation Satellite Systems (GNSS)</h2>
+					<p>Barry Byford</p>
+					<p>@uk_baz</p>
 				</section>
 
 				<section>
-					<h2>No Theme</h2>
-					<p>There's no theme included, so it will fall back on browser defaults.</p>
+					<h3>Navigation has been around for a long time</h3>
+					<p><img src="images/oldWorld.png"></p>
 				</section>
+                <section>
+					<h3>Evolution of Navigation: Landmarks</h3>
+					<p><img width=125% src="images/landmark.jpg"</p>
+                    <p><small>http://www.indiana.edu/~iirg/ARTICLES/NAVIGATION/wayfinding.html</small></p>
+				</section>
+                <section>
+					<h3>Evolution of Navigation: Compass</h3>
+					<p><img src="images/compass.jpg"</p>
+                    <p><small>
+                        <a href="http://commons.wikimedia.org/wiki/File:Stanley_compass_1.jpg">
+                           http://commons.wikimedia.org/wiki/File:Stanley_compass_1.jpg</a>
+                    </small></p>
+				</section>
+                <section>
+					<h3>Evolution of Navigation: Celestial Navigation</h3>
+					<p>Accurate time becomes important</p>
+				</section>
+                <section>
+					<h3>Evolution of Navigation: Ground Based Radio</h3>
+					<p>Accurate time becomes important</p>
+				</section>
+                <section>
+					<h3>Evolution of Navigation: Early Satellite</h3>
+					<p>Accurate time becomes important</p>
+				</section>
+                <section>
+					<h3>Global Positioning System</h3>
+					<ul>
+                        <li>American Department of Defence started development in 1973
+                            <ul>
+                              <li>In 1995 it was declared fully operational</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Satellites have the advantage of:
+                            <ul>
+                                <li>Signal reception is better than by land</li>
+                                <li>Signals can pass through clouds and rain</li>
+                                <li>Satellites are hard to dismantle</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>System provides:
+                            <ul>
+                                <li>Navigation anywhere in the world</li>
+                                <li>Under any weather condition</li>
+                                <li>Unlimited number of users</li>
+                                <li>For Free (after equipment purchase)</li>
+                            </ul>
+                        </li>
+                    </ul>
+				</section>
+                <section>
+                    <h3>Trilateration to find location</h3>
+                    <p><img src="images/trilateration1.png"></p>
+                </section>
+                <section>
+                    <h3>Trilateration to find location</h3>
+                    <p><img src="images/trilateration2.png"></p>
+                </section>
+                <section>
+                    <h3>Trilateration to find location</h3>
+                    <p><img src="images/trilateration3.png"></p>
+                </section>
+                <section>
+                    <h3>To find distance from speed and time</h3>
+                    <p>
+                        <img src="images/distance.png">
+                    </p>
+                </section>
+                <section>
+                    <h3>Another view of that...</h3>
+                    <p>
+                        <img src="images/PRNtime.png">
+                    </p>
+                </section>
+                <section>
+                    <h3>Overview of Workshop Hardware</h3>
+                    <p>
+                        <img src="images/workstation.png">
+                    </p>
+                </section>
+
 
 			</div>
 
 		</div>
 
-		<script src="../../lib/js/head.min.js"></script>
-		<script src="../../js/reveal.js"></script>
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
 
 		<script>
 
-			Reveal.initialize();
+			Reveal.initialize({
+			    transition: 'convex'
+			});
 
 		</script>
 
