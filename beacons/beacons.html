@@ -28,6 +28,17 @@
                     <p>A light-weight subset of classic Bluetooth which was introduced as
                         part of the Bluetooth 4.0 core specification</p>
 				</section>
+				<section>
+					<h2>Beacons</h2>
+					<p>Uses BLE's advertising feature</p>
+                    <p>Cannot connect to a beacon - Transmit only</p>
+                    <p>Contains small amount of information</p>
+				</section>
+                <section>
+                    <h2>iBeacon</h2>
+                    <p>The specifications are available after signing an NDA.</p>
+                    <p>https://developer.apple.com/ibeacon/</p>
+                </section>
                 <section>
                     <h2>altBeacon Specification</h2>
                     <p>AltBeacon is a protocol specification that defines a 
@@ -52,9 +63,44 @@
                     </small></p>
                 </section>
                 <section>
-                    <h2>iBeacon</h2>
-                    <p>The specifications are available after signing an NDA.</p>
-                    <p>https://developer.apple.com/ibeacon/</p>
+                    <h2>Physical Web offers most</h2>
+                    <pre><code>
+UriBeaconScanner.on('discover', function(uriBeacon) {
+    console.log('discovered UriBeacon:');
+    console.log('  uri      = ' + uriBeacon.uri);
+    console.log('  flags    = ' + uriBeacon.flags);
+    console.log('  TX power = ' + uriBeacon.txPower);
+    console.log('  RSSI     = ' + uriBeacon.rssi);
+    console.log();
+});
+                    </code></pre>
+                    <p><small>
+                        <a href="https://github.com/google/physical-web/blob/master/nodejs/basic-scanner.js">
+                            https://github.com/google/physical-web/blob/master/nodejs/basic-scanner.js
+                        </a>
+                    </small></p>
+                </section>
+                <section>
+                    <h2>So what can I do with them?</h2>
+                    <p>location aware computing</p>
+                    <p>Can be moving beacon</p>
+                    <p>Or moving scanner</p>
+                </section>
+                <section>
+                    <h3 >Proximity more than location</h3>
+                    <p>
+                        <img height=350 src="images/beacons.png">
+                    </p>
+                    <p>
+                        Easy to spot which is closest<br>
+                        Harder to spot exact location
+                    </p>
+                </section>
+                <section>
+                    <h2>Using with a Raspberry Pi</h2>
+                    <p>You'll need a Bluetooth v4.0 dongle</p>
+                    <p><img height = 250 src="images/dongle.jpg"</p>
+                    <p>Can be scanner or beacon</p>
                 </section>
                 <section>
                     <h2>Scott Jenson</h2>
@@ -74,7 +120,8 @@
 		<script>
 
 			Reveal.initialize({
-			    transition: 'convex'
+			    transition: 'convex',
+			    slideNumber: true
 			    });
 
 		</script>
