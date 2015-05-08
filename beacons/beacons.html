@@ -36,34 +36,64 @@
 				</section>
                 <section>
                     <h2>iBeacon</h2>
-                    <p>The specifications are available after signing an NDA.</p>
-                    <p>https://developer.apple.com/ibeacon/</p>
+                    <p>Apple’s iBeacon was the first BLE Beacon technology to 
+                    hit the headlines.
+                    </p>
+                    <p>
+                        The iBeacon is a proprietary, closed standard.
+                    </P>
+                    <p>
+                    The large ecosystem around iBeacons and a large 
+                    pool of resources for developers is only available after
+                    signing Apple’s developer license.
+                    </p>
+                    <p><small>
+                        <a href="https://developer.apple.com/ibeacon">
+                    https://developer.apple.com/ibeacon/</a></small></p>
                 </section>
                 <section>
-                    <h2>altBeacon Specification</h2>
-                    <p>AltBeacon is a protocol specification that defines a 
-                    message format for proximity beacon advertisements. 
-                    AltBeacon proximity beacon advertisements are transmitted
-                    by devices for the purpose of signaling their proximity 
-                    to nearby receivers.</p>
-                    <p><img width=90% src="images/altbeacon-spec-exploded-view.png"></p>
+                    <h2>altBeacon</h2>
+                    <p>
+                        AltBeacons is a free open-specification for beacon 
+                        design provided by Radius Networks.
+                    </p>
+                    <p>
+                        The AltBeacon has the same functionality as that
+                        of an iBeacon and seems to be a direct response to the 
+                        closed source iBeacon spec
+                    </p>
+                    <p>
+                        It looks to be gaining some momentum although it is
+                        not that widely supported (yet)
+                    </p>
+                    <p><img width=50% src="images/altbeacon-spec-exploded-view.png"></p>
                     <p><small>
                         <a href="https://github.com/AltBeacon/spec">
                         https://github.com/AltBeacon/spec</a>
                     </small></p>
                 </section>
                 <section>
-                    <h2>UriBeacon Specification</h2>
-                    <p>The Web Uri Open Beacon specification for the Internet of Things</p>
-                    <p>(pronounced YUR-ee-BEE-kun)</p>
-                    <p><img width = 90% src="images/uribeacon-figure.png"></p>
-                    <p><small>
+                    <h2>uriBeacon</h2>
+                    <p></p><small>(pronounced YUR-ee-BEE-kun)</small><br>
+                        uriBeacons is an open project that is backed by Google
+                        as part of their Physical Web initiative.<br>
+                        Beacon payload is an URL (although could be a URN)
+                    </p>
+                    <p>
+                        URL's could open up some interesting possibilities
+                        especially for Raspberry Pi and IoT enthusiasts
+                    </p>
+                    <p><img width = 50% src="images/uribeacon-figure.png"></p>
+                    <p>
+                    <small>
                         <a href="https://github.com/google/uribeacon/tree/master/specification">
                             https://github.com/google/uribeacon/tree/master/specification</a>
                     </small></p>
                 </section>
                 <section>
-                    <h2>Physical Web offers most</h2>
+                    <h2>uriBeacon appears to offer most</h2>
+                    <p>uri can be url or urn</p>
+                    <p>Example code on GitHub</p>
                     <pre><code>
 UriBeaconScanner.on('discover', function(uriBeacon) {
     console.log('discovered UriBeacon:');
