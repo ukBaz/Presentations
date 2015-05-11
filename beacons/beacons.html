@@ -24,15 +24,16 @@
 
 				<section>
 					<h2>The Technology</h2>
-					<p>Bluetooth Low Energy (BLE), officially know as "Bluetooth Smart"</p>
+					<p>Bluetooth Low Energy (BLE), officially known as "Bluetooth Smart"</p>
                     <p>A light-weight subset of classic Bluetooth which was introduced as
                         part of the Bluetooth 4.0 core specification</p>
 				</section>
 				<section>
 					<h2>Beacons</h2>
 					<p>Uses BLE's advertising feature</p>
-                    <p>Cannot connect to a beacon - Transmit only</p>
+                    <p>Transmit only</p>
                     <p>Contains small amount of information</p>
+                    <p>A number of different 'standards' for this information</p>
 				</section>
                 <section>
                     <h2>iBeacon</h2>
@@ -43,8 +44,7 @@
                         The iBeacon is a proprietary, closed standard.
                     </P>
                     <p>
-                    The large ecosystem around iBeacons and a large 
-                    pool of resources for developers is only available after
+                    The large ecosystem and pool of resources around iBeacons for developers is only available after
                     signing Apple’s developer license.
                     </p>
                     <p><small>
@@ -54,8 +54,8 @@
                 <section>
                     <h2>altBeacon</h2>
                     <p>
-                        AltBeacons is a free open-specification for beacon 
-                        design provided by Radius Networks.
+                        AltBeacon is a free open-specification for beacons
+                        designed by Radius Networks.
                     </p>
                     <p>
                         The AltBeacon has the same functionality as that
@@ -64,7 +64,7 @@
                     </p>
                     <p>
                         It looks to be gaining some momentum although it is
-                        not that widely supported (yet)
+                        not that widely supported yet
                     </p>
                     <p><img width=50% src="images/altbeacon-spec-exploded-view.png"></p>
                     <p><small>
@@ -74,10 +74,10 @@
                 </section>
                 <section>
                     <h2>uriBeacon</h2>
-                    <p></p><small>(pronounced YUR-ee-BEE-kun)</small><br>
+                    <p><small>(pronounced YUR-ee-BEE-kun)</small><br>
                         uriBeacons is an open project that is backed by Google
                         as part of their Physical Web initiative.<br>
-                        Beacon payload is an URL (although could be a URN)
+                        Beacon payload is an URI (either URL or URN)
                     </p>
                     <p>
                         URL's could open up some interesting possibilities
@@ -92,8 +92,13 @@
                 </section>
                 <section>
                     <h2>uriBeacon appears to offer most</h2>
-                    <p>uri can be url or urn</p>
-                    <p>Example code on GitHub</p>
+                    <ul>
+                        <li>Open standard</li>
+                        <li>Flexible payload</li>
+                        <li>Can be useful without custom native app</li>
+                        <li>Example code on GitHub</li>
+                    </ul>
+
                     <pre><code>
 UriBeaconScanner.on('discover', function(uriBeacon) {
     console.log('discovered UriBeacon:');
@@ -112,7 +117,7 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
                 </section>
                 <section>
                     <h2>So what can I do with them?</h2>
-                    <p>location aware computing</p>
+                    <p>Proximity aware computing</p>
                     <p>Can be moving beacon</p>
                     <p>Or moving scanner</p>
                 </section>
@@ -129,8 +134,8 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
                 <section>
                     <h2>Using with a Raspberry Pi</h2>
                     <p>You'll need a Bluetooth v4.0 dongle</p>
-                    <p><img height = 250 src="images/dongle.jpg"</p>
-                    <p>Can be scanner or beacon</p>
+                    <p><img height = 250 src="images/dongle.jpg"></p>
+                    <p>Pi can be scanner or beacon</p>
                 </section>
                 <section>
                     <h2>Scott Jenson</h2>
@@ -138,6 +143,9 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
                       <source src="images/ScottVending.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <p><a href="https://youtu.be/BL6djal9mqY">
+                        <small>https://youtu.be/BL6djal9mqY</small></a>
+                    </p>
                 </section>
                 <section>
                     <h2>Truth Labs</h2>
@@ -145,8 +153,23 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
                         <source src="images/truthLabs_tracking.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <p><a href="https://vimeo.com/114711115">
+                        <small>https://vimeo.com/114711115</small></a>
+                    </p>
                 </section>
-
+                <section>
+                    <h2>Blesh Beacons</h2>
+                    <video width="640" height="480" controls>
+                        <source src="images/Blesh.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><a href="https://www.youtube.com/watch?v=8AryiXsPQ1Y">
+                        <small>https://www.youtube.com/watch?v=8AryiXsPQ1Y</small></a>
+                    </p>
+                </section>
+                <section>
+                    <h2>And finally...</h2>
+                </section>
 			</div>
 
 		</div>
