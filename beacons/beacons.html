@@ -25,16 +25,39 @@
 				<section>
 					<h2>The Technology</h2>
 					<p>Bluetooth Low Energy (BLE), officially known as "Bluetooth Smart"</p>
-                    <p>A light-weight subset of classic Bluetooth which was introduced as
-                        part of the Bluetooth 4.0 core specification</p>
+                    <p>A light-weight subset of classic Bluetooth introduced as
+                        part of the Bluetooth 4.0 specification</p>
 				</section>
 				<section>
 					<h2>Beacons</h2>
-					<p>Uses BLE's advertising feature</p>
+					<p>Uses BLE's peripheral advertising feature</p>
                     <p>Transmit only</p>
                     <p>Contains small amount of information</p>
-                    <p>A number of different 'standards' for this information</p>
+                    <p><img src="images/PDU.png" /></p>
 				</section>
+                <section>
+                    <h2>Recieve Strength Signal Indicator (RSSI)</h2>
+                    <p>
+                        RSSI is the strength of the beacon's signal as seen on the receiving device
+                    </p>
+                </section>
+                <section>
+                    <h3 >RSSI is noisy</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="images/beacons.png">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Absorption</li>
+                                    <li>Interference</li>
+                                    <li>Diffraction</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
                 <section>
                     <h2>iBeacon</h2>
                     <p>Apple’s iBeacon was the first BLE Beacon technology to 
@@ -44,8 +67,7 @@
                         The iBeacon is a proprietary, closed standard.
                     </P>
                     <p>
-                    The large ecosystem and pool of resources around iBeacons for developers is only available after
-                    signing Apple’s developer license.
+                        Details available after signing Apple’s developer license.
                     </p>
                     <p><small>
                         <a href="https://developer.apple.com/ibeacon">
@@ -58,7 +80,7 @@
                         designed by Radius Networks.
                     </p>
                     <p>
-                        The AltBeacon has the same functionality as that
+                        The AltBeacon has similar functionality as that
                         of an iBeacon and seems to be a direct response to the 
                         closed source iBeacon spec
                     </p>
@@ -66,7 +88,7 @@
                         It looks to be gaining some momentum although it is
                         not that widely supported yet
                     </p>
-                    <p><img width=50% src="images/altbeacon-spec-exploded-view.png"></p>
+                    <p><img src="images/altBeacon.png"></p>
                     <p><small>
                         <a href="https://github.com/AltBeacon/spec">
                         https://github.com/AltBeacon/spec</a>
@@ -75,15 +97,16 @@
                 <section>
                     <h2>uriBeacon</h2>
                     <p><small>(pronounced YUR-ee-BEE-kun)</small><br>
-                        uriBeacons is an open project that is backed by Google
-                        as part of their Physical Web initiative.<br>
+                        The UriBeacon Specification is designed with the goal of:
+                    </p>
+                        <blockquote>
+                            Create the easiest, most open way to discover and use nearby smart things
+                        </blockquote>
+                    <p>
                         Beacon payload is an URI (either URL or URN)
                     </p>
                     <p>
-                        URL's could open up some interesting possibilities
-                        especially for Raspberry Pi and IoT enthusiasts
-                    </p>
-                    <p><img width = 50% src="images/uribeacon-figure.png"></p>
+                        <img src="images/uriBeacon.png"></p>
                     <p>
                     <small>
                         <a href="https://github.com/google/uribeacon/tree/master/specification">
@@ -100,6 +123,8 @@
                     </ul>
 
                     <pre><code>
+var UriBeaconScanner = require('uri-beacon-scanner');
+
 UriBeaconScanner.on('discover', function(uriBeacon) {
     console.log('discovered UriBeacon:');
     console.log('  uri      = ' + uriBeacon.uri);
@@ -108,6 +133,8 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
     console.log('  RSSI     = ' + uriBeacon.rssi);
     console.log();
 });
+
+UriBeaconScanner.startScanning();
                     </code></pre>
                     <p><small>
                         <a href="https://github.com/google/physical-web/blob/master/nodejs/basic-scanner.js">
@@ -117,25 +144,38 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
                 </section>
                 <section>
                     <h2>So what can I do with them?</h2>
-                    <p>Proximity aware computing</p>
-                    <p>Can be moving beacon</p>
-                    <p>Or moving scanner</p>
+                    <ul>
+                        <li>Fancy QRcode/NFC</li>
+                        <li>broadcasting URL's of nearby smart device</li>
+                        <li>Proximity tracking</li>
+                    </ul>
                 </section>
                 <section>
-                    <h3 >Proximity more than location</h3>
-                    <p>
-                        <img height=350 src="images/beacons.png">
-                    </p>
-                    <p>
-                        Easy to spot which is closest<br>
-                        Harder to spot exact location
-                    </p>
-                </section>
-                <section>
-                    <h2>Using with a Raspberry Pi</h2>
+                    <h2>Extra hardware for Raspberry Pi</h2>
                     <p>You'll need a Bluetooth v4.0 dongle</p>
                     <p><img height = 250 src="images/dongle.jpg"></p>
                     <p>Pi can be scanner or beacon</p>
+                </section>
+                <section>
+                    <h2>Software on the Pi</h2>
+                    <ul>
+                        <li>Bluez</li>
+                        <li>node.js</li>
+                        <ul>
+                            <li>uri-beacon-scanner</li>
+                            <li>onoff.js</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Blesh Beacons</h2>
+                    <video width="640" height="480" controls>
+                        <source src="images/Blesh.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><a href="https://www.youtube.com/watch?v=8AryiXsPQ1Y">
+                        <small>https://www.youtube.com/watch?v=8AryiXsPQ1Y</small></a>
+                    </p>
                 </section>
                 <section>
                     <h2>Scott Jenson</h2>
@@ -158,33 +198,14 @@ UriBeaconScanner.on('discover', function(uriBeacon) {
                     </p>
                 </section>
                 <section>
-                    <h2>Blesh Beacons</h2>
-                    <video width="640" height="480" controls>
-                        <source src="images/Blesh.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p><a href="https://www.youtube.com/watch?v=8AryiXsPQ1Y">
-                        <small>https://www.youtube.com/watch?v=8AryiXsPQ1Y</small></a>
+                    <H2>Live Demo</H2>
+                    <p>
+                        <img src="images/liveDemo.png" />
                     </p>
                 </section>
-                <section>
-                    <h2>Software on the Pi</h2>
-                    <ul>
-                    <li>Bluez</li>
-                    <li>node.js</li>
-                    <ul>
-                        <li>onoff.js</li>
-                        <li>uri-beacon-scanner</li>
-                    </ul>
-                    </ul>
-                </section>
+
                 <section>
                     <h2>Summary</h2>
-                    <img height=300 src="images/physical_web_log.png"/>
-                    <img height=300 src="images/ibeacon.jpg"/>
-                </section>
-                <section>
-                    <h2>Questions?</h2>
                 </section>
 			</div>
 
