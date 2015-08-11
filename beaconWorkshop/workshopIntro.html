@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tracking Bluetooth Beacons</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/moon.css" id="theme">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h1>Tracking Bluetooth Beacons</h1>
+					<p>Barry Byford & Sonia Caldwell</p>
+					<p>@uk_baz</p>
+				</section>
+				<section>
+					<h2>Beacons</h2>
+                    <p>
+                        <a href="https://commons.wikimedia.org/wiki/File%3AEddystone_Lighthouse_-_geograph.org.uk_-_1579951.jpg" >
+                        <img src="assets/Eddystone_Lighthouse.jpg" /> </a>
+                    </p>
+                    <p>
+                        <small>
+                            Andy Talbot [<a href="http://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AEddystone_Lighthouse_-_geograph.org.uk_-_1579951.jpg">via Wikimedia Commons</a>
+                        </small>
+                    </p>
+                </section>
+                <section>
+                    <h2>Bluetooth Beacons</h2>
+                    <p>Uses BLE's peripheral advertising feature</p>
+                    <p>Transmit only</p>
+                    <p>Contains small amount of information</p>
+                    <p><img src="assets/PDU.png" /></p>
+				</section>
+				<section>
+					<h2>The Technology</h2>
+					<p>Bluetooth Low Energy (BLE), officially known as "Bluetooth Smart"</p>
+                    <p>A light-weight subset of classic Bluetooth introduced as
+                        part of the Bluetooth 4.0 specification</p>
+				</section>
+                <section>
+                    <H2>Proximity Ranges</H2>
+                    <p>
+                        <img height=400px src="assets/beacon_range.png" />
+                    </p>
+                </section>
+                <section>
+                    <h2>Recieve Strength Signal Indicator (RSSI)</h2>
+                    <p>
+                        RSSI is the strength of the beacon's signal as seen on the receiving device
+                    </p>
+                </section>
+                <section>
+                    <h3>RSSI vs Distance</h3>
+                    <p>
+                        <img src="assets/range_graph.png"
+                    </p>
+                </section>
+                <section>
+                    <h3 >RSSI is noisy</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="assets/beacons.png">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Absorption</li>
+                                    <li>Interference</li>
+                                    <li>Diffraction</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h3>Event-Driven programming</h3>
+                    <p>flow of the program is determined by events</p>
+                    <p>e.g. On Beacon Discovery </p>
+
+                    <pre><code>
+var UriBeaconScanner = require('uri-beacon-scanner');
+
+UriBeaconScanner.on('discover', function(uriBeacon) {
+    console.log('discovered UriBeacon:');
+    console.log('  uri      = ' + uriBeacon.uri);
+    console.log('  flags    = ' + uriBeacon.flags);
+    console.log('  TX power = ' + uriBeacon.txPower);
+    console.log('  RSSI     = ' + uriBeacon.rssi);
+    console.log();
+});
+
+UriBeaconScanner.startScanning();
+                    </code></pre>
+                    <p><small>
+                        <a href="https://github.com/google/physical-web/blob/master/nodejs/basic-scanner.js">
+                            https://github.com/google/physical-web/blob/master/nodejs/basic-scanner.js
+                        </a>
+                    </small></p>
+                </section>
+
+
+                <section>
+                    <h2>Workshop</h2>
+                    <p><img src="assets/hardware_2.png"></p>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+			    transition: 'convex',
+			    slideNumber: true
+			    });
+
+		</script>
+
+	</body>
+</html>
