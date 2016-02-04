@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lichen Beacons</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/moon.css" id="theme">
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = '../../reveal.js/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h1>Lichen Beacons</h1>
+					<p>Barry Byford</p>
+					<p>@uk_baz</p>
+				</section>
+                <section>
+                    <h2>GPS</h2>
+                    <p><img src="images/early_gps.png" /></p>
+                </section>
+                <section>
+                    <h2>GPS develop</h2>
+                    <p><img src="images/proto_gps.png" /></p>
+                </section>
+                <section>
+                    <h2>GPS Final</h2>
+                    <p><img src="images/final_gps.png" /></p>
+                </section>
+                <section>
+					<h2>The Technology for beacons</h2>
+					<p>Bluetooth Low Energy (BLE), officially known as "Bluetooth Smart"</p>
+                    <p>A light-weight subset of classic Bluetooth introduced as
+                        part of the Bluetooth 4.0 specification</p>
+				</section>
+                <section>
+                    <h2>Basic Idea</h2>
+                    <video width="640" height="480" controls>
+                      <source src="images/uriScanner.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+                <section>
+                    <h2>Testing on location</h2>
+                    <p><img src="images/beacon_proto.jpg" /></p>
+                </section>
+                <section>
+                    <h3 >RSSI is noisy</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="images/rssi_noise_crop.png">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Absorption</li>
+                                    <li>Interference</li>
+                                    <li>Diffraction</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>Pi-in-a-box</h2>
+                    <p><img src="images/final_beacon.jpg" /></p>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+			    transition: 'convex',
+			    slideNumber: true
+			    });
+
+		</script>
+
+	</body>
+</html>
